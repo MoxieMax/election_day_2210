@@ -17,17 +17,16 @@ RSpec.describe Race do
     
     it 'can register candidates' do
       candidate1 = race.register_candidate!({name: "Diana D", party: :democrat})
-      candidate2 = race.register_candidate!({name: "Roberto R", party: :republican})
-      binding.pry
+      
+      # binding.pry
       expect(candidate1.class).to eq(Candidate)
       expect(candidate1.name).to eq("Diana D")
       expect(candidate1.party).to eq(:democrat)
       expect(race.candidates).to eq([candidate1])
       
+      candidate2 = race.register_candidate!({name: "Roberto R", party: :republican})
       
-      
-      expect(race.candidate).to eq([candidate1, candidate2])
+      expect(race.candidates).to eq([candidate1, candidate2])
     end
-    # expect().to eq()
   end
 end
