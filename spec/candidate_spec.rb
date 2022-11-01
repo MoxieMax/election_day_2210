@@ -1,3 +1,4 @@
+require 'pry'
 require './lib/candidate'
 
 RSpec.describe Candidate do
