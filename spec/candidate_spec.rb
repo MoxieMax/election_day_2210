@@ -12,7 +12,7 @@ RSpec.describe Candidate do
       expect(diana.party).to eq(:democrat)
     end
     
-    xit 'can count votes' do
+    it 'can count votes' do
       expect(diana.votes).to eq(0)
       diana.vote_for!
       diana.vote_for!
