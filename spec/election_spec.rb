@@ -18,14 +18,14 @@ RSpec.describe Election do
       expect(election.races).to eq([])
     end
     
-    xit 'can add races' do
+    it 'can add races' do
       election.add_race(race1)
       election.add_race(race2)
       
       expect(election.races).to eq([race1, race2])
     end
     
-    xit 'can add candidates to races' do
+    it 'can add candidates to races' do
       candidate1 = race1.register_candidate!({name: "Diana D", party: :democrat})
       candidate2 = race1.register_candidate!({name: "Roberto R", party: :republican})
       candidate3 = race2.register_candidate!({name: "Diego D", party: :democrat})
