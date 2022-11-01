@@ -16,11 +16,9 @@ RSpec.describe Candidate do
     
     it 'can count votes' do
       expect(diana.votes).to eq(0)
-      diana.vote_for!
-      diana.vote_for!
-      diana.vote_for!
-      expect(diana.votes).to eq(3)
-      diana.vote_for!
+      4.times do
+        diana.vote_for!
+      end
       expect(diana.votes).to eq(4)
     end
   end

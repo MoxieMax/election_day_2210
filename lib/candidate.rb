@@ -1,3 +1,5 @@
+require './lib/candidate'
+
 class Candidate
   attr_reader :name,
               :party,

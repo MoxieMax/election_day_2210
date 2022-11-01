@@ -253,3 +253,4 @@ pry(main)> election.add_race(race3)
 pry(main)> election.winners
 => [#<Candidate:0x00007fc7443163a8...>] #only 1 candidate expected since one race is a tie and another is still open
 ```
+Additionally, you should use TDD to implement a method for the `Election` class called `winners` that will return an array of the Candidate objects that represents the winner from each race. If the race is a tie or is still open, no winner should be returned for that race.
